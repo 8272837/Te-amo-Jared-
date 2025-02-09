@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Una carta de amor, para el amor de mi vida</title> 
+  <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fff0f7;
+            color: #f8a8c4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.5em;
+            color: #f05a73;
+            margin-top: 50px;
+            font-family: 'Cursive', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .heart-button {
+            background-color: #ff4040;
+            color: white;
+            font-size: 1.5em;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+        }
+        .heart-button:hover {
+            transform: scale(1.1);
+        }
+        .letter {
+            background: #ffffff;
+            color: #f78fb3;
+            padding: 40px;
+            margin: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+            font-size: 1.3em;
+            line-height: 1.6;
+            font-family: 'Georgia', serif;
+            border: 2px solid #f05a73;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .letter span {
+            font-style: italic;
+            font-size: 1.5em;
+            color: #f05a73;
+            font-weight: bold;
+        }
+        .sorpresa-button {
+            background-color: #f78fb3;
+            color: white;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 50px;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+        }
+        .sorpresa-button:hover {
+            background-color: #f05a73;
+            transform: scale(1.1);
+        }
+        .music {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            visibility: hidden;
+        }
+        audio {
+            display: none;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style> 
+ </head> 
+ <body> 
+  <audio class="music" autoplay loop> 
+   <source src="https://www.bensound.com/bensound-music/bensound-precious.mp3" type="audio/mp3"> 
+  </audio> 
+  <h1>Una carta de amor, para el amor de mi vida</h1> <button class="heart-button" onclick="showLetter()">Presione</button> 
+  <div id="letter" class="letter" style="display:none;"> 
+   <p><span>Mi negrito lindo.</span></p> 
+   <p>Eres la luz que ilumina mis días, eres el refugio donde siempre encuentro paz. No hay palabra suficiente para expresar la gratitud que siento con la vida porque estás a mi lado..</p> 
+   <p>Quiero que sepas que mi amor por ti es genuino y intenso, y que cada instante a tu lado, se volverá un recuerdo que juntos vamos a contar a nuestros hijos. Te amo con toda la intensidad de mi ser, y mi deseo más profundo es que te sientas la persona más afortunada de este planeta, que te sientas entero y satisfecho por lo que vas construyendo a mi lado.</p> 
+   <p>Gracias por ser tú, y llenar mis días de alegrías, por enseñarme a amar, siempre estaré aquí para ti, apoyándote y celebrando nuestros triunfos juntos.</p> 
+   <p>Te extraño cada instante que no estoy a tu lado, cada segundo que no estoy agarrando tus manos.</p> 
+   <p><span>Con todo mi amor, Briana.</span></p> <button class="sorpresa-button" onclick="showAnniversary()">Preciona aqui chiquito</button> 
+  </div> 
+  <script>
+        function showLetter() {
+            document.getElementById('letter').style.display = 'block';
+        }
+
+        function showAnniversary() {
+            document.getElementById('letter').innerHTML = `
+                <p><span>Estoy muy feliz porque estamos cumpliendo nuestro primer año juntos chiquito lindo, te amuuu demasiado mi amor, el tiempo pasa rápido mi amor, pronto serán 8 o 10 años juntos, luego vamos a celebrar los años de nuestros hijos y luego los de nuestros nietos.</span></p>
+                <button class="sorpresa-button" onclick="window.location.reload()">Volver a empezar</button>
+            `;
+        }
+    </script> 
+ 
+</body></html>
